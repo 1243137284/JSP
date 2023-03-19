@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>Charpter06</display-name>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Restricted Methods</web-resource-name>
+      <url-pattern>/*</url-pattern>
+      <http-method>DELETE</http-method>
+      <http-method>PUT</http-method>
+    </web-resource-collection>
+    <auth-constraint/>
+  </security-constraint>
+  <servlet>
+    <description></description>
+    <display-name>LoginTest</display-name>
+    <servlet-name>LoginTest</servlet-name>
+    <servlet-class>sec04.LoginTest</servlet-class>
+  </servlet>
+  <servlet>
+    <description></description>
+    <display-name>LoginTestW</display-name>
+    <servlet-name>LoginTestW</servlet-name>
+    <servlet-class>sec05.LoginTestW</servlet-class>
+  </servlet>
+ 
+</web-app>

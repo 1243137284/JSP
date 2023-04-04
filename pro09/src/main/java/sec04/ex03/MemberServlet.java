@@ -1,6 +1,16 @@
 package sec04.ex03;
 
+
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Date;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 import java.util.List;
 
@@ -44,7 +54,7 @@ public class MemberServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out=response.getWriter();
 		MemberDAO dao=new MemberDAO();
-		List memberList=dao.ListMembers();
+		List memberList=dao.listMembers();
 		request.setAttribute("membersList",membersList);
 		RequestDispatcher dispatch=request.getRequestDispatcher("viewMembers");
 		dispatch.forward(request,response);

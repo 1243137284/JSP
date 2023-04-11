@@ -42,19 +42,19 @@ public class LoginServlet extends HttpServlet {
 		
 		String data="안녱하세요<br>로그인하솄습니다.<br><br>";
 		data+="<html><body>";
-		data+="아이디"+"user_id";
+		data+="아이디:"+user_id;
 		data+="<br>";
-		data+="패스워드"+"user_pw";
+		data+="패스워드:"+user_pw;
 		data+="<br>";
-		data+="주소"+"user_address";
+		data+="주소:"+user_address;
 		data+="<br>";
-		data+="email"+"user_email";
+		data+="email:"+user_email;
 		data+="<br>";
-		data+="휴대전화"+"user_hp";
-		data+="</body></html>";
+		data+="휴대전화:"+user_hp;
+		data+="<br>";
 		out.print(data);
 		user_address=URLEncoder.encode(user_address,"utf-8");
-		out.print("<a href='/pro09/second?user_id="+user_id+"&user_pw="+user_pw+"&user_address="+user_address+"'>두 번째 서블릿으로 보내기</a>");
+		out.print("<a href='/pro10/second?user_id="+user_id+"&user_pw="+user_pw+"&user_address="+user_address+"'>두 번째 서블릿으로 보내기</a>");
 		data="</body></html>";
 		out.print(data);
 	}

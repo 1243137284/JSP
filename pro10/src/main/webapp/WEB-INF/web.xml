@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>pro09</display-name>
+  <display-name>pro10</display-name>
  	  <servlet>
     <description></description>
     <display-name>SetCookieValue</display-name>
@@ -26,5 +26,61 @@
     <servlet-name>GetCookieValue</servlet-name>
     <servlet-class>sec02.ex1.GetCookieValue</servlet-class>
   </servlet>
+
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+
+<servlet>
+    <description></description>
+    <display-name>SessionTest</display-name>
+    <servlet-name>SessionTest</servlet-name>
+    <servlet-class>sec03.ex01.SessionTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionTest</servlet-name>
+    <url-pattern>/SessionTest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SessionTest03</display-name>
+    <servlet-name>SessionTest03</servlet-name>
+    <servlet-class>sec03.ex01.SessionTest03</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionTest03</servlet-name>
+    <url-pattern>/SessionTest03</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>loginServlet</display-name>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>sec05.ex01.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MemberDAO</display-name>
+    <servlet-name>MemberDAO</servlet-name>
+    <servlet-class>sec05.ex01.MemberDAO</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberDAO</servlet-name>
+    <url-pattern>/MemberDAO</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowMember</display-name>
+    <servlet-name>ShowMember</servlet-name>
+    <servlet-class>sec05.ex01.ShowMember</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowMember</servlet-name>
+    <url-pattern>/ShowMember</url-pattern>
+  </servlet-mapping>
+
 
 </web-app>
